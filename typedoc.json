@@ -1,0 +1,16 @@
+{
+  "entryPoints": [
+    "./src/*.ts"
+  ],
+  "out": "./docs"
+
+
+
+
+}
+
+//npm install typedoc --save-dev
+
+//ejecutar: npx typedoc
+
+//instalar: npm i --save-dev mocha chai @types/mocha @types/chai ts-node
