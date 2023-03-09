@@ -9,13 +9,10 @@ que permitan obtener listados en función de diferentes términos de búsqueda: 
 
 export interface Streamable<T> {
     
-    // Propiedades
-    id: number;
-    title: string;
-    year: number;
-
     // Métodos
-    searchById(id: number): T;
-    searchByTitle(title: string): T;
-    searchByYear(year: number): T;
+    searchById(id: number): T | undefined;
+    searchByTitle(title: string): T | undefined;
+    searchByYear(year: number): T | undefined;
 }
+
+
