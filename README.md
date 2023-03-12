@@ -11,6 +11,10 @@
 
   Para el desarrollo de esta práctica he utilizado un sistema operativo Ubuntu por lo cual algunos de los pasos realizados solo estarán disponibles para los usuarios que utilicen este sistema operativo.
 
+## Coveralls
+
+[![Coverage Status](https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-AlbertoZarzaM/badge.svg?branch=master)](https://coveralls.io/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-AlbertoZarzaM?branch=master)
+
 
 ## Ejercicio 1
 
