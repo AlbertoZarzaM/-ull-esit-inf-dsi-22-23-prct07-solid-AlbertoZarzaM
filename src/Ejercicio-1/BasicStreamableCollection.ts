@@ -1,52 +1,44 @@
-import { Streamable } from "./Streamable";
+import { Streamable } from "./StreamableMethods";
 
-/* Defina una clase abstracta genérica BasicStreamableCollection que implemente dicha interfaz genérica. En este punto, podrá particularizar algunas de las propiedades y métodos de 
-la interfaz Streamable, aunque otros tendrán que permanecer como abstractos para ser definidos más abajo en la jerarquía de clases. Todo dependerá del diseño que haya llevado a cabo.
-
-*/
-
+/**
+ * Clase abstracta que implementa la interfaz Streamable
+ * @param id ID del streamable
+ * @param title Título del streamable
+ * @param streamableCollection Colección de streamables
+ * @returns Retorna una instancia de la clase BasicStreamableCollection
+ * 
+ * @method searchById: Busca un streamable por su ID
+ * @method searchByTitle: Busca un streamable por su título
+ * @method searchByYear: Busca un streamable por su año
+ * @method addStreamable: Agrega un streamable a la colección
+ * @method getTitle: Retorna el título del streamable
+ * @method getID: Retorna el ID del streamable
+ * 
+ */
 export abstract class BasicStreamableCollection<T> implements Streamable<T> {
+
+    id: number;
+    title: string;
 
     // Atributos
     protected streamableCollection: T[];
 
     // Constructor
-    constructor(streamableCollection: T[]) {
+    constructor(streamableCollection: T[], id: number, title: string) {
         this.streamableCollection = streamableCollection;
+        this.id = id;
+        this.title = title;
     }
 
    // Métodos
     abstract searchById(id: number): T | undefined;
     abstract searchByTitle(title: string): T | undefined;
     abstract searchByYear(year: number): T | undefined;
+    abstract addStreamable(streamable: T): void;
+    abstract getTitle(): string;
+    abstract getID(): number;
 
 }
 
 
-
-
-/*
-
-interfaz streamable (Principio solid se puede dividir la interfaz en varias interfaces mas pequeñas?)
-
-La interfaz streamable tiene 3 metodos 
-searchById(id: number): T;
-searchByTitle(title: string): T;
-searchByYear(year: number): T;
-
-En cuanto a los propiedades de la interfaz streamable cuales pondria?
-
-
-clase Peluicula
-clase Serie
-clase Documental
-
-
-clase BasicStreamableCollection implementa Streamable
-
-clase PeliculasCollection extiende BasicStreamableCollection   -----> array de peliculas ----> es de tipo Peluicula
-clase SeriesCollection extiende BasicStreamableCollection   -----> array de series  ----->  es de tipo Serie
-clase DocumentalesCollection extiende BasicStreamableCollection  -----> array de documentales ----> es de tipo Documental
-
-*/
 

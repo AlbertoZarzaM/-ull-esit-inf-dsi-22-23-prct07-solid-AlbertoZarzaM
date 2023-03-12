@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import { Rational } from '../src/1PE102/Rational';
+import { Rational } from '../../src/1PE102/Rational';
 
 describe('Rational test', () => {
 

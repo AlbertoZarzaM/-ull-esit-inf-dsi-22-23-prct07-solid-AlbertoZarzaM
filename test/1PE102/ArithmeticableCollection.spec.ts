@@ -1,8 +1,8 @@
 
 import 'mocha';
 import {expect} from 'chai';
-import {ArithmeticableCollection} from '../src/1PE102/ArithmeticableCollection';
-import {Complex} from '../src/1PE102/Complex';
+import {ArithmeticableCollection} from '../../src/1PE102/ArithmeticableCollection';
+import {Complex} from '../../src/1PE102/Complex';
 
 
 describe('ArithmeticableCollection test', () => {

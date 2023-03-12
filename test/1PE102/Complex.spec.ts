@@ -1,6 +1,6 @@
 import 'mocha';
 import {expect} from 'chai';
-import { Complex } from '../src/1PE102/Complex';
+import { Complex } from '../../src/1PE102/Complex';
 
 
 describe('Complex test', () => {
